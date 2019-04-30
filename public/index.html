@@ -1,0 +1,352 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+
+<!doctype html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="https://cdn.glitch.com/bd5cea29-f3f9-4ebe-aaae-98214942bdff%2Ffavicon.ico?1556399451939">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <title>WWBD: What Would Beyoncé Do?</title>
+    
+    <!-- CDN-hosted jQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+    crossorigin="anonymous"></script>
+    
+    <style type="text/css">
+
+      body{
+        background-color: black;
+        text-align: center;
+        font-family: 'Open Sans Condensed', sans-serif;
+        color: pink;
+      }
+      
+      p{
+        font-size: 20px; 
+        word-spacing: 3px;
+      }
+      
+      h1{
+        size: 28px;
+        word-spacing: 5px;
+      }
+      
+      h2{
+        word-spacing: 3px;
+        letter-spacing: .5px;
+      }
+      
+      .angst{
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 1%;
+        margin-left: 4%;
+        margin-right: 4%;
+        font-size: 24px;
+        border: 3px solid #ff96c2;
+        padding:10px;
+        padding-left: 20px;
+        padding-right:20px;
+        border-radius:50px;
+      }
+      
+      .angst:hover{
+        background-color:#ff96c2;
+        color: black; 
+        font-weight: bold;
+      }
+
+      #track{
+        margin: 5%;
+      }
+      
+      .everything-wrapper {
+        position: relative;
+        min-height: 450px;
+      }
+      
+      .content-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transition: opacity .2s linear;
+      }
+      
+      .content-wrapper.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #question{
+        margin: 2%;
+      }
+      
+      .pic_container{
+        display:flex;
+      }
+      
+      .text-stuff {
+        text-align: center;
+        margin: auto;
+        font-size: 20px;
+        font-weight: bold;
+        width: 300px;
+        padding-top: 5%;
+      }
+      
+    .image {
+      flex: 1;
+      opacity: 0.7;
+      cursor: pointer;
+    }
+      
+    .image img {
+      width: 325px;
+      height: 300px;
+      border: 4px solid #ff96c2;
+      border-radius: 25px;
+    }
+      
+    img:hover{
+      filter: brightness(120%);
+    }
+      
+    .options-wrapper{
+      font-size: 22px;
+      margin-bottom: 50px;
+    }
+         
+    .options-wrapper:hover {
+      opacity: 1;
+    }  
+      
+    .blessing {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }  
+      
+    .track-wrapper.hidden {
+      display: none;
+    }
+      
+    </style>
+  </head>
+  
+  <body>
+
+    <h1>
+      WHAT WOULD BEYONCÉ DO?
+    </h1>
+
+    <main>
+      <p>
+        We all need advice sometimes.
+        Let's see what Beyoncé has to say about your situation.
+      </p>
+      
+      <h2>
+        Where's your angst coming from?
+      </h2>
+      
+      <div class="options-wrapper">
+        <div class="angst" data-id="work">
+          Work
+        </div>
+        
+        <div class="angst" data-id="love">
+          Relationship
+        </div>
+        
+        <div class="angst" data-id="mood">
+          Mood
+        </div>
+      </div>
+      
+      <div class="everything-wrapper">
+        
+        <div id="workAngst" class="content-wrapper hidden">
+          <h2>What's got you down?</h2>
+
+          <div class="container">
+            <div class="pic_container">
+              <div class="image" data-id="1uXbwHHfgsXcUKfSZw5ZJ0">
+                <img src="https://images.complex.com/complex/images/c_limit,w_680/fl_lossy,pg_1,q_auto/ynjqs7i8hcdq9446gids/beyonce">
+                  <div class="text-stuff">
+                  I have serious imposter syndrome
+                  </div>
+              </div>
+
+              <div class="image" data-id="5Ssv6DaKrW0HczVqx6zXdl">
+                <img src="https://media.tenor.com/images/7fb61adc2d24898fb9d03e979da2af29/tenor.png">
+                <div class="text-stuff">
+                    I'm scared to ask for a raise
+                  </div>
+              </div>
+
+              <div class="image" data-id="7lUA4P03AhwAw40JHkdyGr">
+                <img src="https://secure.i.telegraph.co.uk/multimedia/archive/02473/beyonce-superbowl_2473526c.jpg">
+                <div class="text-stuff">
+                  Everyone seems cooler than me
+                </div>
+              </div>
+
+            </div> <!--end of pic container -->
+          </div>  <!--end of container -->
+        </div> <!--end of content-wrapper -->  
+
+        <div id="moodAngst" class="content-wrapper hidden">
+          <h2>Tell me what's up</h2>
+          <div class="container">
+            <div class="pic_container">
+
+              <div class="image" data-id="7tefUew2RUuSAqHyegMoY1">
+                <img src="https://pixel.nymag.com/imgs/fashion/daily/2018/04/16/16-beyonce-coachella-2.w700.h700.jpg">
+                  <div class="text-stuff">
+                  I'm feeling insecure
+                  </div>
+              </div>
+
+              <div class="image" data-id="7aBxcRw77817BrkdPChAGY">
+                <img src="https://i.pinimg.com/originals/85/c6/1e/85c61ed9ff0c61b7940c8cfa44f5abec.jpg">
+                <div class="text-stuff">
+                    Things are really hard right now
+                  </div>
+              </div>
+
+              <div class="image" data-id="6g0Orsxv6glTJCt4cHsRsQ">
+                <img src="https://img.huffingtonpost.com/asset/56b8d6e21f00000d012178c8.jpeg?cache=q3pt01gjs9&ops=crop_69_69_1339_1159,scalefit_720_noupscale">
+                <div class="text-stuff">
+                  Please just play Formation
+                </div>
+              </div>
+
+          </div> <!--end of pic container -->
+         </div> <!--end of container div -->
+        </div><!--end of content-wrapper -->  
+
+        <div id="loveAngst" class="content-wrapper hidden">
+          <h2>What'd he do?</h2>
+          <div class="container">
+            <div class="pic_container">
+              <div class="image" data-id="5R9a4t5t5O0IsznsrKPVro">
+                <img src="https://data.whicdn.com/images/311707869/superthumb.jpg?t=1525282492">
+                  <div class="text-stuff">
+                  He won't commit
+                  </div>
+              </div>
+
+              <div class="image" data-id="78eouBKVRyhbSzJwChr6QM">
+                <img src="http://blogdailyherald.com/wp-content/uploads/2014/03/beyonce-crying-2012-07-05-300x300.png">
+                <div class="text-stuff">
+                    He's a cheater
+                  </div>
+              </div>
+
+              <div class="image" data-id="0lnIJmgcUpEpe4AZACjayW">
+                <img src="https://s.yimg.com/ny/api/res/1.2/yn7IOIasKb.tslarWpDi2A--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/the_drive_165/498e0f859802d9cf112e08db9d051fdd">
+                <div class="text-stuff">
+                  He wants me back and I don't even have time
+                </div>
+              </div>
+
+          </div> <!--end of pic container -->
+         </div> <!--end of container div -->
+        </div><!--end of content-wrapper -->  
+        
+      </div> <!-- end everything-wrapper -->
+     
+      <div id="track" class="track-wrapper hidden">
+        <p class="blessing">
+          Our queen has blessed you with "<span id="trackName"></span>"
+        </p>
+        <iframe id="trackEmbed" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>      
+      </div>
+        
+    </main>
+    
+    <script>
+      function getTrackFromSpotify(trackId) {
+        return $.ajax({
+          method: 'POST',
+          url: '/',
+          data: {
+            value: trackId
+          },
+          dataType: 'json',
+        });
+      }
+      
+      function showTrackName(name) {
+        document.getElementById('trackName').textContent = name;
+      }
+      
+      function showTrackContainer() {
+        const trackEl = document.getElementById('track');
+        if (trackEl.classList.contains('hidden')) {
+          trackEl.classList.remove('hidden');
+        }
+      }
+
+      function updateIframeSrc(value) {
+        document.getElementById('trackEmbed').src = `https://embed.spotify.com/?uri=spotify%3Atrack%3A${value}`;
+      }
+      
+      function getAndDisplayTrackInfo(trackId) {
+        getTrackFromSpotify(trackId)
+          .done(function (response) {
+            const { album, id, name } = response;
+            const iframe = document.getElementById('trackEmbed');
+          
+            showTrackName(name);
+            updateIframeSrc(id);
+
+            iframe.addEventListener('load', function() {
+              showTrackContainer();
+            });
+          });
+      }
+      
+      const optionsArray = document.getElementsByClassName("angst");
+      for (let i = 0; i < optionsArray.length; i++) {
+        optionsArray[i].addEventListener('click', function (evt) {
+          const value = evt.currentTarget.getAttribute('data-id');
+          
+          // first hide any sections that are open
+          const sectionsArray = document.getElementsByClassName('content-wrapper');
+          for (let k = 0; k < sectionsArray.length; k++) {
+            if (!sectionsArray[k].classList.contains('hidden')) {
+              sectionsArray[k].classList.add('hidden');
+            }
+          }
+          
+          // unhide the section we want
+          const id = value + 'Angst';
+          document.getElementById(id).classList.remove('hidden');
+        });
+      }
+      
+      const imageArray = document.getElementsByClassName("image");
+      for (let j = 0; j < imageArray.length; j++){
+        imageArray[j].addEventListener('click', function(evt){
+          evt.preventDefault();
+          const target = evt.currentTarget;
+          console.log('target', target);
+          const value = evt.currentTarget.getAttribute("data-id");
+          console.log('value', value);
+          getAndDisplayTrackInfo(value);
+        });
+      }
+    </script>
+  </body>
+</html>
